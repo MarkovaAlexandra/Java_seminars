@@ -11,6 +11,7 @@ public class Task01 {
         for (int i = 0; i < n; i++) {
             int num = scanner.nextInt();
             int count = 0;
+
             for (int j = 2; j <= Math.sqrt(num); j++) {
                 if (num % j == 0) {
                     count += 1;
@@ -18,10 +19,11 @@ public class Task01 {
             }
             if (count == 0) {
                 sum += num;
-                }
+            }
             count = 0;
         }
-        scanner.close();
+
         System.out.println(sum);
     }
 }
+

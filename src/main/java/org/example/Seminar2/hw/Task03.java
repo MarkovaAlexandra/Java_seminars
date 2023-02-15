@@ -8,7 +8,7 @@ public class Task03 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        int [] nums = new int [n];
+        int[] nums = new int[n];
         for (int i = 0; i < n; i++) {
             nums[i] = scanner.nextInt();
         }
@@ -17,17 +17,17 @@ public class Task03 {
 
         int sum = 0;
         for (int i = 0; i < nums.length; i++) {
-                if (nums[i] > 9 & nums[i] < 100){
-                    sum +=i;
-                }
-                }
-            for (int i = 0; i < nums.length; i++) {
-                if (nums[i] < 0){
-                    nums[i] = sum;
+            if ((nums[i] > 9 & nums[i] < 100)||(nums[i] < -9 & nums[i]>-100)) {
+                sum += i;
             }
-            }
-        System.out.println(Arrays.toString(nums));
         }
-
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] < 0) {
+                nums[i] = sum;
+            }
+        }
+        System.out.println(Arrays.toString(nums));
     }
+
+}
 
