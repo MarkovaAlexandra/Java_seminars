@@ -7,13 +7,17 @@ public class Task02 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
+        System.out.println(isRaise(scanner,n));
+    }
+    public static boolean isRaise(Scanner scanner,int n) {
+
+
         int num1 = scanner.nextInt();
-        int count = 0;
         int equalCount = 0;
         for (int i = 1; i < n; i++) {
             int num2 = scanner.nextInt();
             if (num1 > num2) {
-                count += 1;
+                return false;
             } else if (num1 == num2) {
                 equalCount += 1;
             }
@@ -21,11 +25,15 @@ public class Task02 {
 
         }
         scanner.close();
-        if (count > 0 || equalCount == n - 1) {
-            System.out.println("Последовательность не возрастающая");
+        if (equalCount == n - 1) {
+            return false;
+
         } else {
-            System.out.println("Последовательность возрастающая");
+            return true;
 
         }
     }
-}
+
+    }
+
+
