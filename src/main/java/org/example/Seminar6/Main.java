@@ -63,18 +63,10 @@ public class Main {
                         System.out.println("Можем вам предложить: ");
                         for (int i = 0; i < base.size(); i++) {
                             if (base.get(i).getBrand().toLowerCase().equals(minimum.toLowerCase()) || base.get(i).getBrand().toLowerCase().equals(maximum.toLowerCase())) {
-
                                 resultlist.add(base.get(i));
                             }
                         }
-                            if (resultlist.size()>0) {
-                                for (int k = 0; k < resultlist.size(); k++) {
-                                    System.out.println(resultlist.get(k));
-                                }
-                            }
-                            else{
-                                System.out.println("Таких нет");}
-
+                        PrintAr(resultlist);
                         break;
                     }
                     case ("ram"): {
@@ -92,14 +84,7 @@ public class Main {
                                     resultlist.add(base.get(i));
                                 }
                             }
-                        if (resultlist.size()>0){
-                            for (int k = 0; k < resultlist.size(); k++) {
-                                System.out.println(resultlist.get(k));
-                            }
-
-                        }
-                        else{
-                            System.out.println("Таких нет");}
+                        PrintAr(resultlist);
                             break;
                         }
                     case ("price"): {
@@ -117,13 +102,7 @@ public class Main {
                                 resultlist.add(base.get(i));
                             }
                         }
-                        if (resultlist.size()>0) {
-                            for (int k = 0; k < resultlist.size(); k++) {
-                                System.out.println(resultlist.get(k));
-                            }
-                        }
-                        else{
-                            System.out.println("Таких нет");}
+                        PrintAr(resultlist);
                         break;
                     }
                     case ("discount"): {
@@ -133,13 +112,7 @@ public class Main {
                                 resultlist.add(base.get(i));
                             }
                         }
-                        if (resultlist.size()>0) {
-                            for (int k = 0; k < resultlist.size(); k++) {
-                                System.out.println(resultlist.get(k));
-                            }
-                        }
-                        else{
-                            System.out.println("Таких нет");}
+                        PrintAr(resultlist);
                         break;
                     }
                     case ("color"): {
@@ -149,18 +122,21 @@ public class Main {
                                 resultlist.add(base.get(i));
                             }
                         }
-                        if (resultlist.size()>0) {
-                            for (int k = 0; k < resultlist.size(); k++) {
-                                System.out.println(resultlist.get(k));
-                            }
-                        }
-                        else{
-                            System.out.println("Таких нет");}
+                        PrintAr(resultlist);
                        break;
                         }
                 }
             }
         }
+    }
+    public static void PrintAr(ArrayList list){
+        if (list.size()>0) {
+            for (int k = 0; k < list.size(); k++) {
+                System.out.println(list.get(k));
+            }
+        }
+        else{
+            System.out.println("Таких нет");}
     }
 }
 
